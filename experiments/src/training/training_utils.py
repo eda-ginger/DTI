@@ -229,7 +229,7 @@ def _get_data_split_from_tdc(task_name: str,
                              split_method: str,
                              split_frac: Tuple[float, float, float],
                              split_seed: int) -> Split:
-    import tdc.single_pred
+    import data.single_pred
     task = getattr(tdc.single_pred, task_name)
     data = task(name=dataset_name, label_name=assay_name)
     split = data.get_split(method=split_method, seed=split_seed, frac=split_frac)
